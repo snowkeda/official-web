@@ -1,0 +1,224 @@
+$black: #000;
+$white: #fff;
+$yellow: #D9BD66;
+$red: #CA2626;
+
+.time-line {
+  position: absolute;
+  top: 0;
+  bottom: 30px;
+  left: 0;
+  z-index: 9;
+  transition: transform .4s, opacity .5s;
+  will-change: transform, opacity;
+  pointer-events: none;
+  &.end-line{
+    .tip-container{
+      margin-top: 70px;
+    }
+  }
+  .time-line-main {
+    position: absolute;
+    z-index: 11;
+    height: 100%;
+
+    .tip-container {
+      .tip-text {
+        font-size: 12px;
+        // width: 100px;
+        // font-size: 0;
+        margin: 4px 0;
+        transform: translateX(-50%);
+        color: $white;
+      }
+    }
+
+    .txt {
+      font-size: 14px;
+      transform: translateX(-50%);
+      will-change: contents;
+
+      &.end {
+        padding-top: 30px;
+      }
+    }
+
+    .box {
+      min-width: 60px;
+      padding: 0 10px;
+      line-height: 2;
+      border-radius: 4px;
+      background: $white;
+      font-size: 12px;
+      color: $black;
+      opacity: 0.8;
+      text-align: center;
+      transform: translateX(-50%);
+    }
+
+    .time-lineL {
+      position: absolute;
+      top: 0;
+      bottom: 30px;
+      left: -1px;
+      z-index: 11;
+      border-left: 2px solid $white;
+    }
+
+    .icon {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 11;
+      width: 30px;
+      height: 30px;
+      font-size: 30px;
+      margin-left: -15px;
+      &.clock {
+        bottom: 2px;
+        margin-left: -16px;
+        // transform-origin: 50% 50%;
+        &.yellow {
+          .icon-clock {
+              color: $yellow;
+          }
+          .clock-second {
+              border-color: $yellow;
+          }
+        }
+        &.red {
+          animation: zhendongClock2 .5s infinite ease-in-out;
+          .icon-clock {
+              color: $red;
+          }
+          .clock-second {
+              border-color: $red;
+          }
+        }
+      }
+    }
+  }
+
+  .mask {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9;
+    opacity: .3;
+    background-image: linear-gradient(to right, #28677A, transparent);
+    animation: maskIn .25s linear;
+    animation-fill-mode: forwards;
+  }
+
+  &.show {
+    transition: none;
+    animation: lineIn .25s linear;
+    animation-fill-mode: forwards;
+    // will-change: left, opacity;
+  }
+
+  &.hide {
+    transition: none;
+    animation: lineOut .25s linear;
+    animation-fill-mode: forwards;
+    // will-change: left, opacity;
+  }
+
+  &.white {
+    .txt {
+      color: $white;
+    }
+
+    .time-lineL {
+      // border-style: dashed;
+      border-image: linear-gradient(to top, $white 40%, transparent) 0 1;
+    }
+  }
+
+  &.yellow {
+    .txt {
+      color: $yellow;
+    }
+
+    .time-lineL {
+      border-image: linear-gradient(to top, $yellow, transparent) 0 1;
+    }
+  }
+
+  &.red {
+    .txt {
+      color: $red;
+    }
+
+    .time-lineL {
+      border-image: linear-gradient(to top, $red, transparent) 0 1;
+    }
+  }
+
+  &.opacity {
+    opacity: .3;
+  }
+
+  .iconfont {
+    line-height: initial;
+  }
+}
+
+@keyframes lineIn {
+  0% {
+    left: 30px;
+    opacity: 0;
+  }
+
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes lineOut {
+  0% {
+    left: 0;
+    opacity: 1;
+  }
+
+  100% {
+    left: -60px;
+    opacity: 0;
+  }
+}
+
+@keyframes maskIn {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 40vw;
+  }
+}
+
+@keyframes zhendongClock1 {
+  10% {
+      transform: rotate(-10deg);
+  }
+  30% {
+      transform: rotate(10deg);
+  }
+  0%, 20%, 40%, 100% {
+      transform: rotate(0deg);
+  }
+}
+@keyframes zhendongClock2 {
+  10% {
+    transform: rotate(-10deg);
+  }
+  30% {
+      transform: rotate(10deg);
+  }
+  0%, 20%, 40%, 100% {
+      transform: rotate(0deg);
+  }
+  
+}

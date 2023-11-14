@@ -1,0 +1,356 @@
+@keyframes animationGift {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50%{
+    transform: translate(-30px, -50px) ;
+  }
+  100% {
+    transform: translate(0px, 0px);
+  } 
+}
+@keyframes animationBall {
+  0% {
+    transform: translate(0px, 0px);
+    opacity: 0.2;
+  }
+  50%{
+    transform: rotate(0.4rad);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0px, 0px);
+    opacity: 0.2;
+  } 
+}
+.airdrop-box{
+  background-color: #121214;
+  .campaign{
+    height: 1080px;
+    background: url('../../assets/img/airdrop/top-bg.png') no-repeat;
+    background-position: center -80px;
+    background-size: cover;
+    overflow: hidden;
+    .box{
+      margin: 0 14%;
+      height: 100%;
+      position: relative;
+      // background: url(../../assets/img/airdrop/airdrop.png) no-repeat;
+      // background-size: 523px 618px;
+      // background-position: right 130px;
+      padding-top: 170px;
+      
+      h1{
+        font-size: 44px;
+        font-family: Outfit-ExtraBold, Outfit;
+        font-weight: 800;
+        color: #FFFFFF;
+        line-height: 50px;
+      }
+      .slash{
+        position: absolute;
+        width: 90px;
+        height: 18px;
+        background: url('../../assets/img/airdrop/slash.png') no-repeat;
+        background-size: contain;
+        left: 373px;
+        top: 193px;
+      }
+      h2{
+        font-size: 50px;
+        font-family: Outfit-ExtraBold, Outfit;
+        font-weight: 800;
+        color: #0276F4;
+        line-height: 50px;
+        margin-top: 24px;
+      }
+      .desc{
+        font-size: 18px;
+        font-family: Outfit-Regular, Outfit;
+        font-weight: 400;
+        color: #FFFFFF;
+        line-height: 24px;
+        width: 520px;
+        margin-top: 40px;
+      }
+      .block{
+        width: 60px;
+        height: 60px;
+        background: url(../../assets/img/airdrop/block.png) no-repeat;
+        background-size: contain;
+        margin: 86px 0 36px 0;
+      }
+      .desc-r{
+        font-size: 14px;
+        font-family: Outfit-Light, Outfit;
+        font-weight: 300;
+        color: rgba(255, 255, 255, 0.6);
+        line-height: 20px;
+        width: 552px;
+      }
+      .time-box{
+        color: #FFFFFF;
+        text-align: center;
+        margin-top: 200px;
+        ul{
+          display: inline-block;
+          li{
+            display: inline-block;
+            height: 90px;
+            background: linear-gradient(180deg, #2F3336 0%, #19191C 53%, #19191C 53%, #2D3336 100%);
+            border: 2px solid #242428;
+            text-align: center;
+            &.dot{
+              vertical-align: top;
+              line-height: 90px;
+              background: transparent;
+              border-width: 0;
+              margin: 0 16px;
+            }
+            &:last-child{
+              display: none;
+            }
+            p{
+              width: 70px;
+              &:first-child{
+                font-size: 40px;
+                font-family: Outfit-Medium, Outfit;
+                font-weight: 500;
+                color: #01F9DF;
+                margin: 16px 0 8px 0;
+              }
+              &:last-child{
+                font-size: 14px;
+                font-family: Outfit-Light, Outfit;
+                font-weight: 300;
+                color: rgba(255, 255, 255, 0.6);
+              }
+            }
+          }
+        }
+      }
+      .gift-box{
+        position: absolute;
+        width: 520px;
+        height: 618px;
+        right: 0;
+        top: 130px;
+        background: url('../../assets/img/airdrop/gift-base.png') no-repeat left bottom;
+        background-size: 487px 517px;
+        .gift{
+          width: 284px;
+          position: absolute;
+          right: 90px;
+          animation: animationGift 8s infinite linear;
+        }
+        .ball{
+          position: absolute;
+          left: 12px;
+          top: 156px;
+          width: 127px;
+          animation: animationBall 6s infinite linear;
+        }
+        .plaball{
+          position: absolute;
+          width: 97px;
+          right: -36px;
+          top: 305px;
+          animation: animationBall 6s infinite linear;
+        }
+      }
+    }
+  }
+  .how-airdrop{
+    margin: 0 10%;
+    padding-top: 24px;
+    > h1{
+      max-width: 558px;
+      border: 1px solid rgba(255,255,255,0.5);
+      font-size: 30px;
+      font-family: Outfit-SemiBold, Outfit;
+      font-weight: 600;
+      color: #FFFFFF;
+      border-radius: 40px;
+      line-height: 60px;
+      margin: 0 auto;
+      padding-left: 40px;
+      box-sizing: border-box;
+      background: url(../../assets/img/airdrop/how-air.png) no-repeat 472px center;
+      background-size: 70px 56px;
+      margin-bottom: 50px;
+     
+    }
+    p{
+      font-size: 16px;
+      font-family: Outfit-Light, Outfit;
+      font-weight: 300;
+      color: #FFFFFF;
+      line-height: 24px;
+      text-align: center;
+    }
+    ul{
+      text-align: center;
+      margin-top: 85px;
+      padding-bottom: 100px;
+      li{
+        width: 590px;
+        height: 480px;
+        position: relative;
+        background: #181819;
+        border-radius: 20px;
+        border: 1px solid #29292A;
+        display: inline-block;
+        vertical-align: top;
+        text-align: center;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        &:nth-child(2n) {
+          margin-right: 0;
+        }
+        img{
+          width: 150px;
+          margin: 60px 0 40px 0;
+        }
+        h1{
+          font-size: 24px;
+          font-family: Outfit-ExtraBold, Outfit;
+          font-weight: 800;
+          color: #FFFFFF;
+          line-height: 40px;
+          margin-bottom: 46px;
+          position: relative;
+          z-index: 3;
+        }
+        span{
+          position: absolute;
+          color: #29292A;
+          font-family: Outfit-ExtraBold, Outfit;
+          font-size: 40px;
+          font-weight: bolder;
+          top: 270px;
+          left: 50%;
+          transform: translate(-50%, 0);
+        }
+        p{
+          font-size: 16px;
+          font-family: Outfit-Light, Outfit;
+          font-weight: 300;
+          color: #FFFFFF;
+          line-height: 24px;
+          width: 456px;
+          margin: 0 auto;
+        }
+      }
+    }
+    .note{
+      max-width: 1200px;
+      background: linear-gradient(90deg, #0275F5 0%, #00A392 100%);
+      border-radius: 20px;
+      min-height: 100px;
+      font-size: 18px;
+      font-family: Outfit-Regular, Outfit;
+      font-weight: 400;
+      color: #FFFFFF;
+      line-height: 24px;
+      box-sizing: border-box;
+      padding: 26px 70px 0 130px;
+      margin: 0 auto 80px auto;
+      position: relative;
+      &::before{
+        position: absolute;
+        content: '';
+        width: 70px;
+        height: 70px;
+        background: url('../../assets/img/airdrop/note.png') no-repeat center;
+        background-size: contain;
+        left: 30px;
+        top: 15px;
+      }
+    }
+  }
+  .airdrop-footer{
+    margin: 0 310px;
+    text-align: center;
+    position: relative;
+    padding-bottom: 110px;
+    &::before{
+      content: '';
+      position: absolute;
+      width: 100%;  
+      height: 1px;
+      background: linear-gradient(to right, rgba(18, 18, 20, 0), #6D6D6D, rgba(18, 18, 20, 0));
+      left: 0;
+      top: 0;
+    }
+    img.binx{
+      width: 56px;
+      margin-top: 80px;
+      margin-bottom: 32px;
+    }
+    .media-list{
+      li{
+        display: inline-block;
+        margin-right: 12px;
+        height: 36px;
+        a{
+          width: 36px;
+          height: 36px;
+          display: inline-block;
+          font-size: 0;
+          vertical-align: top;
+        }
+        &.twitter{
+          background: url('../../assets/img/home/twitter.png') no-repeat center;
+          background-size: cover;
+        }
+        &.telegram{
+          background: url('../../assets/img/home/telegram.png') no-repeat center;
+          background-size: cover;
+        }
+        &.discord{
+          background: url('../../assets/img/home/discord.png') no-repeat center;
+          background-size: cover;
+        }
+        &.m{
+          background: url('../../assets/img/home/m.png') no-repeat center;
+          background-size: cover;
+        }
+        &.youtube{
+          background: url('../../assets/img/home/youtube.png') no-repeat center;
+          background-size: cover;
+        }
+        &.github{
+          background: url('../../assets/img/home/github.png') no-repeat center;
+          background-size: cover;
+        }
+        &:hover{
+          cursor: pointer;
+          &.twitter{
+            background: url('../../assets/img/home/twitter-a.png') no-repeat center;
+            background-size: cover;
+          }
+          &.telegram{
+            background: url('../../assets/img/home/telegram-a.png') no-repeat center;
+            background-size: cover;
+          }
+          &.discord{
+            background: url('../../assets/img/home/discord-a.png') no-repeat center;
+            background-size: cover;
+          }
+          &.m{
+            background: url('../../assets/img/home/m-a.png') no-repeat center;
+            background-size: cover;
+          }
+          &.youtube{
+            background: url('../../assets/img/home/youtube-a.png') no-repeat center;
+            background-size: cover;
+          }
+          &.github{
+            background: url('../../assets/img/home/github-a.png') no-repeat center;
+            background-size: cover;
+          }
+        }
+      }
+    }
+  }
+}

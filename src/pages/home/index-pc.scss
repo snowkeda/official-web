@@ -1,0 +1,84 @@
+
+.home-box{
+  background: linear-gradient(180deg, #010205 0%, #081D23 45%, #111111 100%);
+  .home-content{
+    padding-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    .navigationBar{
+      flex: 0 0 80px;
+      box-sizing: border-box;
+      height: calc(100vh - 96px);
+      position: relative;
+      z-index: 3;
+      // background: rgba(255,255,255,0.04);
+      border-right: 1px solid rgba(1,249,223,0.1);
+      // border-top: 1px solid rgba(1,249,223,0.1);
+      > ul{
+        height: 100%;
+        position: relative;
+        z-index: 2;
+        background: #0D171B;
+        li{
+          cursor: pointer;
+          &.active{
+            p{
+              color: #fff;
+            }
+          }
+          padding-top: 24px;
+          padding-bottom: 8px;
+          img{
+            width: 28px;
+            display: block;
+            margin: 0 auto;
+          }
+          p{
+            font-size: 16px;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.5);
+            line-height: 18px;
+            text-align: center;
+            padding-top: 8px;
+          }
+        }
+      }
+    }
+    // 抽屉
+    .drawer-box{
+      position: absolute;
+      height: calc(100vh - 96px);
+      top: 0;
+      right: 0;
+      z-index: 0;
+      min-width: 300px;
+      box-sizing: border-box;
+      background: #122227;
+      transition: transform 0.3s linear;
+      border-radius: 4px 10px 10px 0px;
+      overflow: hidden;
+    }
+    .home-center{
+      flex: 1 1 auto;
+      padding: 0 16px 20px 16px;
+      overflow: hidden;
+      min-width: 667px;
+      
+      // min-width: none;
+    }
+    .home-right{
+      flex: 0 0 280px;
+      min-height: calc(100vh - 96px);
+      background: rgba(255,255,255,0.05);
+      border-radius: 10px 0px 0px 10px;
+      box-sizing: border-box;
+      padding: 16px;
+    }
+  }
+  
+}
+
+.svg-box{
+  width: 200px;
+  height: 200px;
+}

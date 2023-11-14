@@ -1,0 +1,141 @@
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.endPoint {
+  display: inline-block;
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  will-change: transform;
+  transition: transform .5s linear;
+  z-index: 99;
+
+  .cicle {
+    position: relative;
+    // transform-origin: 0% 50%;
+    cursor: pointer;
+
+    .heart {
+      position: relative;
+      z-index: 2;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: url('../../../assets/img/endPoint.png') no-repeat;
+      background-size: contain;
+      cursor: pointer;
+      animation: rotation 3s linear infinite;
+    }
+  }
+
+  .info {
+    position: relative;
+    left: 40px;
+    top: -20px;
+    width: 325px;
+
+    .triangle {
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+      width: 0;
+      height: 0;
+      border-width: 8px 8px 8px 0;
+      border-style: solid;
+      border-color: transparent rgba(0, 0, 0, 0.3) transparent transparent;
+      transition: border-color 0.2s linear;
+    }
+
+    .svgLine {
+      visibility: hidden;
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 1000;
+    }
+
+    .amount {
+      position: absolute;
+      top: 0;
+      left: 30px;
+      width: 58px;
+      height: 18px;
+      line-height: 16px;
+      border-radius: 2px;
+      background: #2aac3e;
+      visibility: hidden;
+      opacity: 0;
+
+      span {
+        text-align: left;
+        font-size: 12px;
+        color: #fff;
+      }
+    }
+
+    .result {
+      position: absolute;
+      top: -22px;
+      left: 8px;
+      min-width: 140px;
+      //   height: 60px;
+      padding: 12px 10px;
+      border-radius: 6px;
+      background: rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+      transition: background 0.2s linear;
+
+      p {
+        line-height: 30px;
+        text-align: left;
+        font-weight: bold;
+        font-size: 18px;
+        white-space: nowrap;
+        color: #fff;
+        display: flex;
+        align-items: center;
+
+        .price-icon {
+          width: 14px;
+          height: 16px;
+          display: inline-block;
+          margin-right: 8px;
+        }
+
+        .content {
+          color: #fff;
+          font-size: 18px;
+        }
+
+        .iconfont,
+        .icon-block {
+          width: 14px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .infoUp {
+    .triangle {
+      border-color: transparent #00C253 transparent transparent;
+    }
+
+    .result {
+      background: #00C253;
+    }
+  }
+
+  .infoDown {
+    .triangle {
+      border-color: transparent #F03737 transparent transparent;
+    }
+
+    .result {
+      background: #F03737;
+    }
+  }
+}

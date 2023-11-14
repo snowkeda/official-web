@@ -1,0 +1,260 @@
+$bg: rgba(255, 255, 255, 0.9);
+.chart-line {
+  margin-top: 20px;
+  color: #fff;
+  height: 700px;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  background: url('../../assets/img/home/chart-bg.png') no-repeat center center;
+  background-size: contain;
+  .hoverContainer{
+    height: 100%;
+  }
+}
+
+.zoomContainer {
+  position: absolute;
+  top: 0;
+  pointer-events: none;
+  width: 100%;
+  height: 700px;
+}
+
+.lastpoint-container {
+  // border: 1px solid red;
+  position: relative;
+  z-index: 100; // TODO
+  transition: transform .2s linear;
+  will-change: transform;
+
+  .lastpoint {
+    position: relative;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #1FEDDB;
+    cursor: pointer;
+    .ripple {
+      position: absolute;
+      top: -12px;
+      left: -12px;
+      z-index: -1;
+
+      div {
+        width: 30px;
+        height: 30px;
+        background: #1FEDDB;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        border-radius: 50%;
+        animation-name: LightOnnn;
+        animation-duration: 3s;
+        animation-timing-function: ease-out;
+        animation-fill-mode: backwards;
+        animation-iteration-count: infinite;
+      }
+
+      .lightTwo {
+        animation-delay: 0.3s;
+      }
+
+      .lightThree {
+        animation-delay: 0.6s;
+      }
+
+      @keyframes LightOnnn {
+        0% {
+          opacity: 0;
+          transform: scale(0.4)
+        }
+
+        10% {
+          opacity: 0.2;
+        }
+
+        33% {
+          opacity: 0;
+          transform: scale(1.2)
+        }
+
+        100% {
+          opacity: 0;
+          transform: scale(0.4)
+        }
+      }
+    }
+  }
+
+  .lastpoint-lineLeft {
+    position: relative;
+    height: 1px;
+    border-top: 1px dashed rgba(256, 256, 256, 0.8);
+
+    &.dark {
+      border-top: 1px dashed rgba(256, 256, 256, 0.3);
+    }
+  }
+
+  .lastpoint-line {
+    position: relative;
+    height: 1px;
+    border-top: 1px solid rgba(256, 256, 256, 0.8);
+
+    &.dark {
+      border-top: 1px solid rgba(256, 256, 256, 0.3);
+    }
+  }
+
+  .lastpoint-tips {
+    position: relative;
+    min-width: 94px;
+    padding-left: 5px;
+    padding-right: 2px;
+    border-radius: 0 4px 4px 0;
+    background: $bg;
+    text-align: left;
+    font-size: 14px;
+    color: #000;
+
+    &::after {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: -12px;
+        width: 0;
+        height: 0;
+        border-top: 15px solid transparent;
+        border-right: 12px solid $bg;
+        border-bottom: 15px solid transparent;
+        content: '';
+    }
+    .point-tips-content {
+      // height: 100%;
+      height: 30px;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .normal {
+      font-size: 14px !important;
+    }
+
+    span {
+      // font-family: Helvetica Neue;
+
+      &.green {
+        color: #1E8B21;
+      }
+
+      &.red {
+        color: #CA2626;
+      }
+    }
+
+    &.dark {
+      background: rgba(54, 62, 79, 0.5);
+
+      &::after {
+        border-right: 12px solid rgba(54, 62, 79, 0.5);
+      }
+
+      span {
+        color: #8F97AE;
+      }
+    }
+  }
+
+  .lastpoint-tips-show-result {
+    height: 50px;
+    line-height: 24px;
+
+    &::after {
+      border-top: 25px solid transparent;
+      border-bottom: 25px solid transparent;
+    }
+
+    .settle-result {
+      // font-size: 14px;
+      font-size: 18px;
+      font-weight: 500;
+      color: #333333;
+      // .result-title {
+      //   font-size: 12px;
+      // }
+
+      // .result-value {
+      //   &.up {
+      //     color: #1E8B21;
+      //   }
+
+      //   &.down {
+      //     color: #CA2626;
+      //   }
+      // }
+    }
+
+    &.dark {
+      .settle-result {
+        color: #8F97AE;
+      }
+    }
+  }
+
+  @keyframes breath {
+
+    0%,
+    30%,
+    100% {
+      box-shadow: 0 0 30px 6px #1C66ED;
+    }
+
+    15% {
+      box-shadow: 0 0 45px 12px #1C66ED;
+    }
+  }
+}
+
+// 全局定位
+.lastpoint-container {
+  .lastpoint {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+  }
+
+  .lastpoint-lineLeft {
+    position: absolute;
+    top: 9px;
+    /* 6 + 3 */
+    // left: 10px;
+    z-index: 2;
+  }
+
+  .lastpoint-line {
+    position: absolute;
+    top: 9px;
+    /* 6 + 3 */
+    right: 103px;
+    z-index: 2;
+  }
+
+  .lastpoint-tips {
+    position: absolute;
+    top: 10px;
+    /* 6 + 3 */
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 5;
+
+    .point-tips-content {
+      // height: 100%;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

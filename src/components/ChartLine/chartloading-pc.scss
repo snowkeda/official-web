@@ -1,0 +1,20 @@
+$loadingBarBgColor: #363e4f;
+
+.kline-loading {
+    position: absolute;
+    z-index: 99;
+    background-image: linear-gradient(-45deg, transparent 0em, transparent 0.5em, $loadingBarBgColor 0.6em, $loadingBarBgColor 1.1em, transparent 1.2em, transparent 1.7em, $loadingBarBgColor 1.8em);
+    background-size: 1.7em 1.7em;
+    opacity: 0.5;
+    animation: warning-animation 0.75s infinite linear;
+    width: 100%;
+    height: 100%;
+}
+@keyframes warning-animation {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 1.7em 0;
+    }
+}

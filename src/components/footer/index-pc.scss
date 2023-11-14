@@ -1,0 +1,163 @@
+@media screen and (min-width: 1300px) {
+  #contactUs{
+    background: rgba(0,0,0,0.3);
+    background: linear-gradient(to top, #051317 0%, #030A0E 100%);
+  }
+  .footer-box{
+    padding-top: 270px;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 100px;
+    .make-easy{
+      display: inline-block;
+      margin-top: -18px;
+      .footer-logo{
+        width: 180px;
+      }
+      p{
+        font-size: 22px;
+        font-weight: 400;
+        color: #FFFFFF;
+        padding: 15px 0 23px 0;
+        font-family: Outfit-Light;
+      }
+      .mail-box{
+        font-size: 18px;
+        font-family: Outfit-Light;
+        font-weight: 400;
+        color: #FFFFFF;
+        // padding-left: 26px;
+        position: relative;
+        padding-top: 19px;
+        width: 289px;
+        margin-top: 19px;
+        /* &::before{
+          content: '';
+          position: absolute;
+          width: 16px;
+          height: 13px;
+          left: 0;
+          top: 25px;
+          background: url('../../assets/img/home/mail.png') no-repeat;
+          background-size: contain;
+        } */
+        
+      }
+      .media-list{
+        li{
+          display: inline-block;
+          margin-right: 12px;
+          height: 36px;
+          a{
+            width: 36px;
+            height: 36px;
+            display: inline-block;
+            font-size: 0;
+            vertical-align: top;
+          }
+          &.twitter{
+            background: url('../../assets/img/home/twitter.png') no-repeat center;
+            background-size: cover;
+          }
+          &.telegram{
+            background: url('../../assets/img/home/telegram.png') no-repeat center;
+            background-size: cover;
+          }
+          &.discord{
+            background: url('../../assets/img/home/discord.png') no-repeat center;
+            background-size: cover;
+          }
+          &.m{
+            background: url('../../assets/img/home/m.png') no-repeat center;
+            background-size: cover;
+          }
+          &.youtube{
+            background: url('../../assets/img/home/youtube.png') no-repeat center;
+            background-size: cover;
+          }
+          &.github{
+            background: url('../../assets/img/home/github.png') no-repeat center;
+            background-size: cover;
+          }
+          &:hover{
+            cursor: pointer;
+            &.twitter{
+              background: url('../../assets/img/home/twitter-a.png') no-repeat center;
+              background-size: cover;
+            }
+            &.telegram{
+              background: url('../../assets/img/home/telegram-a.png') no-repeat center;
+              background-size: cover;
+            }
+            &.discord{
+              background: url('../../assets/img/home/discord-a.png') no-repeat center;
+              background-size: cover;
+            }
+            &.m{
+              background: url('../../assets/img/home/m-a.png') no-repeat center;
+              background-size: cover;
+            }
+            &.youtube{
+              background: url('../../assets/img/home/youtube-a.png') no-repeat center;
+              background-size: cover;
+            }
+            &.github{
+              background: url('../../assets/img/home/github-a.png') no-repeat center;
+              background-size: cover;
+            }
+          }
+        }
+      }
+      .copyright{
+        font-size: 18px;
+        font-weight: 400;
+        color: rgba(255, 255, 255, 0.5);
+        padding-top: 14px;
+        span{
+          color: rgba(255, 255, 255, 0.2);
+        }
+      }
+    }
+    .about-support{
+      display: inline-block;
+      vertical-align: top;
+      margin-left: 110px;
+      li.top-title{
+        font-size: 22px;
+        font-weight: 400;
+        color: #FFFFFF;
+        margin-bottom: 20px;
+      }
+      li{
+        font-size: 16px;
+        font-weight: 400;
+        margin-bottom: 10px;
+        a{
+          color: rgba(255, 255, 255, 0.6);
+          &:hover{
+            color: #FFFFFF;
+          }
+        }
+        span{
+          color: rgba(255, 255, 255, 0.6);
+          font-family: 'Outfit-Light';
+          &:hover{
+            color: #FFFFFF;
+          }
+        }
+      }
+    }
+  }
+  .copyright{
+    text-align: center;
+    font-size: 18px;
+    font-family: Outfit-Regular;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.3);
+    line-height: 20px;
+    padding-bottom: 39px;
+    span{
+      color: rgba(255, 255, 255, 0.2);
+    }
+  }
+}

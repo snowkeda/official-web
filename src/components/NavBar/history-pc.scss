@@ -1,0 +1,116 @@
+.history-box{
+  color: #fff;
+  .title{
+    height: 60px;
+    box-sizing: border-box;
+    border: 1px solid rgba(1,249,223,0.1);
+    background: #040F13;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    border-radius: 4px 10px 0 0px;
+    span {
+      font-size: 16px;
+      font-family: Outfit-Regular, Outfit;
+      font-weight: 400;
+      color: #FFFFFF;
+      line-height: 18px;
+    }
+    img {
+      width: 16px;
+      height: 16px;
+      cursor: pointer;
+    }
+  }
+  .history-list{
+    // max-height: 500px;
+    background-color: #122227;
+    // overflow: hidden;
+    // overflow-y: auto;
+    .empty-box{
+      text-align: center;
+      color: rgba($color: #FFFFFF, $alpha: 0.5);
+      padding: 20px 0;
+    }
+    .item{
+      display: flex;
+      align-items: start;
+      margin: 0 24px;
+      padding: 16px 0;
+      border-bottom: 1px solid rgba(1,249,223,0.1);
+      .time{
+        font-size: 14px;
+        font-weight: 400;
+        color: #FFFFFF;
+        line-height: 16px;
+        width: 80px;
+        display: inline-block;
+        span{
+          display: block;
+        }
+        .mmm{
+          margin-top: 4px;
+          color: rgba($color: #FFFFFF, $alpha: 0.5);
+        }
+      }
+      .blockNumber{
+        width: 70px;
+        color: #FFFFFF;
+      }
+      .income{
+        flex: 1;
+        text-align: right;
+        &.green{
+          color: #00C253;
+        }
+        &.red{
+          color: #F03737;
+        }
+      }
+    }
+  }
+  .video-list{
+    width: 400px;
+    box-sizing: border-box;
+    padding: 20px 24px 24px 24px;
+    h2{
+      font-size: 14px;
+      font-family: Outfit-Light, Outfit;
+      font-weight: 300;
+      color: #FFFFFF;
+      padding-bottom: 16px;
+    }
+    > ul{
+      li{
+        video{
+          width: 100%;
+        }
+        &.lookVideo{
+          cursor: pointer;
+          line-height: normal;
+        }
+      }
+    }
+  }
+}
+.lookVideo{
+  width: 100%;
+}
+
+.video-modal{
+  :global{
+    .ant-modal-content{
+      background-color: #122227;
+      .ant-modal-header{
+        background-color: #122227;
+        .ant-modal-title{
+          color: #fff;
+        }
+      }
+      .ant-modal-close{
+        color: #fff;
+      }
+    }
+  }
+}

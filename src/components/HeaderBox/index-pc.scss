@@ -1,0 +1,87 @@
+.menu-icon{
+  content: '';
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.header-box{
+  height: 80px;
+  background-color: #010205;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(1,249,223,0.1);
+  box-sizing: border-box;
+  white-space: nowrap;
+  .left{
+    display: flex;
+    align-items: center;
+    > a{
+      display: inline-block;
+    }
+    .logo{
+      height: 24px;
+      margin-left: 30px;
+    }
+    .menu-list{
+      list-style: none;
+      display: inline-block;
+      padding-left: 30px;
+      margin: 0;
+      vertical-align: top;
+      li{
+        margin-left: 40px;
+        display: inline-block;
+        position: relative;
+        a{
+          color: #fff;
+          text-decoration: none;
+          font-size: 16px;
+          padding-left: 28px;
+          &:hover, &.active{
+            color: #01F9DF;
+          }
+        }
+        &.airport{
+          display: inline-block;
+          padding-left: 0px;
+          // margin-right: 40px;
+          img{
+            width: 30px;
+            vertical-align: middle;
+          }
+          a{
+            font-size: 16px;
+            font-weight: 300;
+            color: #01F9DF;
+          }
+        }
+        $iconList: "dashboard" "swap" "dao" "ladder" "nfts" "ecosystem" "docs";
+        @each $i in $iconList {
+          &.#{$i}{
+            a{
+              &::before{
+                @extend .menu-icon;
+                background: url('../../assets/img/header/#{$i}.png') no-repeat;
+                background-size: contain;
+              }
+              &:hover, &.active{
+                &::before{
+                  @extend .menu-icon;
+                  background: url('../../assets/img/header/#{$i}-a.png') no-repeat;
+                  background-size: contain;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .right{
+    margin-right: 16px;
+  }
+}

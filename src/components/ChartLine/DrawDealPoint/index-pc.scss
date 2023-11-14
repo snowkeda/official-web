@@ -1,0 +1,572 @@
+.dealPoint {
+  display: inline-block;
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  z-index: 9;
+  //transition: transform .5s linear;
+  //will-change: transform;
+  pointer-events: none;
+
+  &:hover {
+    will-change: contents;
+
+    .circle {
+      will-change: transform, opacity;
+    }
+  }
+
+  .circle {
+    position: relative;
+    transform-origin: 0% 50%;
+    animation: big .333s ease-out; // 下单点多的话，可以临时去掉动画
+    pointer-events: auto;
+    cursor: pointer;
+
+    .heart {
+      position: relative;
+      z-index: 2;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #1aaf1f;
+      cursor: pointer;
+    }
+
+    .border1 {
+      position: absolute;
+      top: -5px;
+      left: -5px;
+      z-index: 1;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      border: 1px dotted rgba(214, 218, 226, .5);
+      // animation: rot 2.4s linear infinite;
+    }
+
+    .border2 {
+      position: absolute;
+      top: -6px;
+      left: -6px;
+      z-index: 0;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      border: 1px solid #fff;
+      visibility: hidden;
+      background-color: #171C29;
+    }
+
+    .border3 {
+      position: absolute;
+      top: -8px;
+      left: -8px;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      border: 1px dotted rgba(214, 218, 226, .5);
+      visibility: hidden;
+    }
+  }
+
+  .info {
+    position: relative;
+    width: 325px;
+    left: 8px;
+    top: -5px;
+    pointer-events: none;
+
+    .svgLine {
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 1000;
+      visibility: hidden;
+      // animation: dash 2s linear forwards;
+    }
+
+    .amount {
+      // width: 58px;
+      height: 18px;
+      background: #1AAF1F;
+      border-radius: 2px;
+      line-height: 16px;
+      position: absolute;
+      padding: 0 5px;
+      top: 0;
+      left: 30px;
+      visibility: hidden;
+      opacity: 0;
+
+      i,
+      span {
+        font-size: 12px;
+        color: #fff;
+        text-align: left;
+      }
+    }
+
+    .result {
+      position: absolute;
+      top: 22px;
+      left: 30px;
+      visibility: hidden;
+      width: 0%;
+      overflow: hidden;
+
+      p {
+        font-size: 12px;
+        color: #DDDEDE;
+        text-align: left;
+        white-space: nowrap;
+
+        .up {
+          font-size: 12px;
+          color: #46E575;
+        }
+
+        .unit {
+          font-size: 12px;
+          color: #7E8599;
+        }
+
+        i {
+          font-size: 12px;
+          color: #DDDEDE;
+        }
+      }
+    }
+  }
+
+  .pricePop {
+    align-items: center;
+    position: absolute;
+    top: -60px;
+    left: 14px;
+    min-width: 60px;
+    // line-height: 30px;
+    border-radius: 10px 10px 10px 1px;
+    font-size: 18px;
+    color: #fff;
+    padding: 4px 12px;
+    transform-origin: 0% 50%;
+    animation: big .333s ease-out; // 下单点多的话，可以临时去掉动画
+
+    p {
+      line-height: 30px;
+    }
+
+    .p-amount {
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .dollar {
+      color: #fff;
+    }
+
+    .price-icon {
+      width: 14px;
+      height: 16px;
+      display: inline-block;
+      margin-right: 8px;
+    }
+
+    span {
+      display: inline-block;
+      font-size: 18px;
+      font-family: Outfit-Regular, Outfit;
+      font-weight: 400;
+      color: #FFFFFF;
+    }
+
+    >.iconfont,
+    >.icon-block {
+      width: 14px;
+      font-size: 14px;
+      vertical-align: -2px;
+    }
+  }
+}
+
+.dealPoint.green {
+  .circle {
+    .heart {
+      background: #00C253;
+    }
+
+    .border1 {
+      border-color: #00C253;
+    }
+  }
+
+  .info {
+    .amount {
+      background: #1AAF1F;
+    }
+
+    .result {
+      p {
+        .up {
+          color: #D6DAE2;
+        }
+
+        .unit {
+          color: #7E8599;
+        }
+      }
+    }
+  }
+
+  .pricePop {
+    background: rgba(42, 172, 62, 0.7);
+  }
+}
+
+.dealPoint.red {
+  .circle {
+    .heart {
+      background: #F03737;
+      position: relative;
+      left: 0.3px;
+    }
+
+    .border1 {
+      border-color: #F03737;
+    }
+  }
+
+  .info {
+    .amount {
+      background: #E82727;
+    }
+
+    .result {
+      p {
+        .up {
+          color: #D6DAE2;
+        }
+
+        .unit {
+          color: #7E8599;
+        }
+      }
+    }
+  }
+
+  .pricePop {
+    background: rgba(232, 79, 67, 0.7);
+  }
+}
+
+.dealPoint.gray {
+  .circle {
+    .heart {
+      background: #798BA1;
+    }
+
+    .border1 {
+      border-color: #798BA1;
+    }
+  }
+
+  .info {
+    .amount {
+      background: #4C5262;
+    }
+
+    .result {
+      p {
+        .up {
+          color: #D6DAE2;
+        }
+
+        .unit {
+          color: #7e8599;
+        }
+      }
+    }
+  }
+
+  .pricePop {
+    background: rgba(255, 255, 255, 0.7);
+    color: #000;
+  }
+}
+
+/* highcharts标记点 */
+.highcharts-annotation-label {
+  will-change: left, top;
+}
+
+// 出现动画
+@keyframes big {
+  0% {
+    transform: scale(0.2);
+    opacity: 0;
+  }
+
+  50% {
+    transform: translateY(-10px) scale(1.6);
+  }
+
+  100% {
+    transform: translateY(0px) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes popbig {
+  0% {
+    visibility: hidden;
+  }
+
+  70% {
+    transform: scale(0.2);
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  85% {
+    transform: translateY(-10px) scale(1.5);
+    visibility: visible;
+  }
+
+  100% {
+    transform: translateY(0px) scale(1);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+// 点击动画
+@keyframes start1 {
+  0% {
+    transform: scale(1) rotate(0);
+  }
+
+  100% {
+    transform: scale(2) rotate(-180deg);
+  }
+}
+
+@keyframes start2 {
+  0% {
+    opacity: 0;
+  }
+
+  33% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(2);
+  }
+}
+
+@keyframes start3 {
+  0% {
+    transform: scale(1) rotate(0);
+  }
+
+  100% {
+    transform: scale(2) rotate(90deg);
+  }
+}
+
+@keyframes rot {
+  0% {
+    transform: scale(2) rotate(0);
+  }
+
+  100% {
+    transform: scale(2) rotate(360deg);
+  }
+}
+
+@keyframes rot2 {
+  0% {
+    transform: scale(2) rotate(0);
+  }
+
+  100% {
+    transform: scale(2) rotate(360deg);
+  }
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes para1 {
+  0% {
+    opacity: 0;
+    left: 20px
+  }
+
+  100% {
+    opacity: 1;
+    left: 30px;
+  }
+}
+
+@keyframes para2 {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes d-big {
+  0% {
+    transform: translateY(0px) scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translateY(-10px) scale(1.6);
+  }
+
+  100% {
+    transform: scale(0.2);
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes d-start1 {
+  0% {
+    transform: scale(2) rotate(0);
+  }
+
+  100% {
+    transform: scale(1) rotate(-180deg);
+  }
+}
+
+@keyframes d-start2 {
+  0% {
+    transform: scale(2);
+    visibility: visible;
+  }
+
+  100% {
+    transform: scale(1);
+    visibility: hidden;
+  }
+}
+
+@keyframes d-start3 {
+  0% {
+    transform: scale(2);
+    visibility: visible;
+  }
+
+  100% {
+    transform: scale(1) rotate(90deg);
+    visibility: hidden;
+  }
+}
+
+@keyframes d-rot {
+  0% {
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform: rotate(0);
+  }
+}
+
+@keyframes d-rot2 {
+  0% {
+    transform: rotate(30deg);
+  }
+
+  100% {
+    transform: rotate(0);
+  }
+}
+
+@keyframes d-dash {
+  0% {
+    // stroke-dasharray: 430;
+    stroke-dashoffset: 700;
+  }
+
+  100% {
+    // stroke-dasharray: 330;
+    stroke-dashoffset: 1000;
+  }
+}
+
+@keyframes d-para1 {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes d-para2 {
+
+  0%,
+  33% {
+    opacity: 1;
+    width: 100%;
+  }
+
+  100% {
+    opacity: 0;
+    width: 100%;
+  }
+}
+
+// 下一轮的灰色点
+@keyframes next {
+  0% {
+    transform: scale(0.5) translate(-50%);
+    top: 0;
+    opacity: 0;
+  }
+
+  75% {
+    transform: scale(1.2) translate(-50%);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1) translate(-50%);
+    top: -30px;
+    opacity: 1;
+  }
+}
+
+@keyframes next2 {
+  0% {
+    transform: scale(1) translate(-50%);
+    top: -30px;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  25% {
+    transform: scale(1.2) translate(-50%);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  100% {
+    transform: scale(0) translate(-50%);
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+  }
+}

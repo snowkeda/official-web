@@ -1,0 +1,133 @@
+.rank-icon{
+  font-size: 0;
+  width: 18px;
+  height: 24px;
+  margin-right: 14px;
+}
+.nav-box{
+  color: #fff;
+  width: 400px;
+  .content{
+    height: 100vh;
+  }
+  .title{
+    height: 60px;
+    box-sizing: border-box;
+    border: 1px solid rgba(1,249,223,0.1);
+    background: #040F13;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    border-radius: 4px 10px 0 0px;
+    span {
+      font-size: 16px;
+      font-family: Outfit-Regular, Outfit;
+      font-weight: 400;
+      color: #FFFFFF;
+      line-height: 18px;
+    }
+    img {
+      width: 16px;
+      height: 16px;
+      cursor: pointer;
+    }
+  }
+  .my-rank{
+    padding-top: 24px;
+    margin: 0 24px;
+    border-bottom: 1px solid rgba(1,249,223,0.1);
+    padding-bottom: 15px;
+    h2{
+      font-size: 16px;
+      font-family: Outfit-Regular, Outfit;
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.5);
+    }
+    .num-score{
+      display: flex;
+      justify-content: space-between;
+      padding-top: 16px;
+      .num{
+        width: 35px;
+        background: url('../../assets/img/home/star.png') no-repeat;
+        background-size: contain;
+        line-height: 35px;
+        text-align: center;
+      }
+      .score{
+        color: #00C253;
+        line-height: 35px;
+      }
+    }
+  }
+  .rank-list{
+    ul{
+      padding-top: 15px;
+      margin: 0 24px 24px 24px;
+      display: flex;
+      justify-content: space-between;
+      li{
+        cursor: pointer;
+        text-align: center;
+        width: 80px;
+        background: rgba(255,255,255,0.05);
+        border-radius: 2px;
+        border: 1px solid rgba(1,249,223,0.1);
+        height: 24px;
+        line-height: 22px;
+        box-sizing: border-box;
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.5);
+        &.active{
+          background: rgba(2,117,245,0.1);
+          border: 1px solid #0275F5;
+          color: #0275F5;
+        }
+      }
+    }
+    .record{
+      padding: 0 24px;
+      .rank-box{
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+        font-family: Outfit-Light, Outfit;
+        font-weight: 300;
+        color: #FFFFFF;
+        .rank-user{
+          display: flex;
+          align-items: center;
+        }
+        .rank{
+          color: #798BA1;
+          display: inline-block;
+          width: 24px;
+          margin-right: 8px;
+          text-align: center;
+          &.pm-0{
+            @extend .rank-icon;
+            background: url('../../assets/img/home/first.png') no-repeat;
+            background-size: contain;
+          }
+          &.pm-1{
+            @extend .rank-icon;
+            background: url('../../assets/img/home/second.png') no-repeat;
+            background-size: contain;
+          }
+          &.pm-2{
+            @extend .rank-icon;
+            background: url('../../assets/img/home/third.png') no-repeat;
+            background-size: contain;
+          }
+        }
+      }
+    }
+    
+  }
+}
+.empty-box{
+  text-align: center;
+  color: rgba($color: #FFFFFF, $alpha: 0.5);
+  padding: 20px 0;
+}

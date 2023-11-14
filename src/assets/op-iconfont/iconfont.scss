@@ -1,0 +1,45 @@
+@font-face {
+  font-family: "opiconfont"; /* Project id 3732819 */
+  src: url('iconfont.eot?t=1667957222336'); /* IE9 */
+  src: url('iconfont.eot?t=1667957222336#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('iconfont.woff2?t=1667957222336') format('woff2'),
+       url('iconfont.woff?t=1667957222336') format('woff'),
+       url('iconfont.ttf?t=1667957222336') format('truetype');
+}
+
+.opiconfont {
+  font-family: "opiconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.opicon-personal:before {
+  content: "\e613";
+}
+
+.opicon-assets:before {
+  content: "\e614";
+}
+
+.opicon-security:before {
+  content: "\e615";
+}
+
+.opicon-logout:before {
+  content: "\e616";
+}
+
+.opicon-setting:before {
+  content: "\e617";
+}
+
+.opicon-youtube:before {
+  content: "\e765";
+}
+
+.opicon-discord:before {
+  content: "\e675";
+}
+

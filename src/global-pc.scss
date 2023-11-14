@@ -1,0 +1,50 @@
+@font-face {
+  font-family: 'Outfit-Regular';
+  src: url("./assets/fonts/outfit/ttf/Outfit-Regular.ttf");
+}
+@font-face {
+  font-family: 'Outfit-Light';
+  src: url("./assets/fonts/outfit/ttf/Outfit-Light.ttf");
+}
+@font-face {
+  font-family: 'Outfit-Medium';
+  src: url("./assets/fonts/outfit/ttf/Outfit-Medium.ttf");
+}
+@font-face {
+  font-family: 'Outfit-ExtraBold';
+  src: url("./assets/fonts/outfit/ttf/Outfit-ExtraBold.ttf");
+}
+@font-face {
+  font-family: 'Outfit-SemiBold';
+  src: url("./assets/fonts/outfit/ttf/Outfit-SemiBold.ttf");
+}
+body, h1, h2, h3, div, p, ul, li, a, button, input, textarea, span, i, strong, label, select, option, form{
+  font-family: 'Outfit-Regular';
+}
+body, h1, h2, h3{
+  margin: 0;
+  font-family: 'Outfit-Regular';
+}
+ul{
+  padding-left: 0;
+  list-style: none;
+  margin: 0;
+}
+p{
+  margin: 0;
+}
+@media screen and (min-width: 1300px) {
+  #root {
+    .out-let{
+      // min-width: 1300px;
+    }
+  }
+}
+
+.global-tips{
+  .ant-message-notice-content{
+    margin-top: 120px;
+    // background-color: rgba(255, 255, 255, 0.8) !important;
+    // color: #fff;
+  }
+}

@@ -1,0 +1,87 @@
+@media screen and (max-width: 1299px) {
+  #contactUs{
+    background: rgba(0,0,0,0.3);
+    background: linear-gradient(to top, #051317 0%, #030A0E 100%);
+  }
+  .footer-box{
+    padding-top: 55px;
+    text-align: center;
+    .make-easy{
+      .footer-logo{
+        width: 90px;
+      }
+      p{
+        font-size: 11px;
+        font-family: Outfit-Regular, Outfit;
+        font-weight: 400;
+        color: #FFFFFF;
+        line-height: 12px;
+        margin: 12px 0 20px 0; 
+      }
+      .mail-box{
+        font-size: 16px;
+        font-family: Outfit-Light;
+        font-weight: 400;
+        color: #FFFFFF;
+        position: relative;
+        padding-top: 12px;
+        transform: scale(0.7);
+      }
+      .media-list{
+        li{
+          display: inline-block;
+          margin-right: 12px;
+          height: 18px;
+          a{
+            width: 18px;
+            height: 18px;
+            display: inline-block;
+            font-size: 0;
+            vertical-align: top;
+          }
+          &.twitter{
+            background: url('../../assets/img/home/twitter-a.png') no-repeat center;
+            background-size: cover;
+          }
+          &.telegram{
+            background: url('../../assets/img/home/telegram-a.png') no-repeat center;
+            background-size: cover;
+          }
+          &.discord{
+            background: url('../../assets/img/home/discord-a.png') no-repeat center;
+            background-size: cover;
+          }
+          &.m{
+            background: url('../../assets/img/home/m-a.png') no-repeat center;
+            background-size: cover;
+          }
+          &.youtube{
+            background: url('../../assets/img/home/youtube-a.png') no-repeat center;
+            background-size: cover;
+          }
+          &.github{
+            background: url('../../assets/img/home/github-a.png') no-repeat center;
+            background-size: cover;
+          }
+        }
+      }
+    }
+    .about-support{
+      display: none;
+    }
+  }
+  .copyright{
+    text-align: center;
+    font-size: 18px;
+    font-family: Outfit-Regular;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.3);
+    line-height: 20px;
+    transform: scale(0.5);
+    padding-bottom: 39px;
+    margin-top: -10px;
+    span{
+      color: rgba(255, 255, 255, 0.2);
+    }
+  }
+}

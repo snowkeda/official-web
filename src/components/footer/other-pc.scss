@@ -1,0 +1,76 @@
+.airdrop-footer{
+  margin: 0 310px;
+  text-align: center;
+  position: relative;
+  padding-bottom: 110px;
+  img.binx{
+    width: 56px;
+    margin-top: 80px;
+    margin-bottom: 32px;
+  }
+  .media-list{
+    li{
+      display: inline-block;
+      margin-right: 12px;
+      height: 36px;
+      a{
+        width: 36px;
+        height: 36px;
+        display: inline-block;
+        font-size: 0;
+        vertical-align: top;
+      }
+      &.twitter{
+        background: url('../../assets/img/home/twitter.png') no-repeat center;
+        background-size: cover;
+      }
+      &.telegram{
+        background: url('../../assets/img/home/telegram.png') no-repeat center;
+        background-size: cover;
+      }
+      &.discord{
+        background: url('../../assets/img/home/discord.png') no-repeat center;
+        background-size: cover;
+      }
+      &.m{
+        background: url('../../assets/img/home/m.png') no-repeat center;
+        background-size: cover;
+      }
+      &.youtube{
+        background: url('../../assets/img/home/youtube.png') no-repeat center;
+        background-size: cover;
+      }
+      &.github{
+        background: url('../../assets/img/home/github.png') no-repeat center;
+        background-size: cover;
+      }
+      &:hover{
+        cursor: pointer;
+        &.twitter{
+          background: url('../../assets/img/home/twitter-a.png') no-repeat center;
+          background-size: cover;
+        }
+        &.telegram{
+          background: url('../../assets/img/home/telegram-a.png') no-repeat center;
+          background-size: cover;
+        }
+        &.discord{
+          background: url('../../assets/img/home/discord-a.png') no-repeat center;
+          background-size: cover;
+        }
+        &.m{
+          background: url('../../assets/img/home/m-a.png') no-repeat center;
+          background-size: cover;
+        }
+        &.youtube{
+          background: url('../../assets/img/home/youtube-a.png') no-repeat center;
+          background-size: cover;
+        }
+        &.github{
+          background: url('../../assets/img/home/github-a.png') no-repeat center;
+          background-size: cover;
+        }
+      }
+    }
+  }
+}
